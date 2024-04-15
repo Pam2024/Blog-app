@@ -1,0 +1,20 @@
+<div class="container">
+  <table class="table table-stripped">
+    <thead>
+      <th>Name</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.lastname}}</td>
+        <td>{{user.email}}</td>
+        <td>
+          <button [routerLink]="['/users', user.id]">Details</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
